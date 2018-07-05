@@ -10,15 +10,14 @@ services:
             - "27015:27015/udp"
             - "27015:27015"
         environment:
-            - "MAXPLAYERS=32"
-            - "START_MAP=cs_italy"
-            - "SERVER_NAME=VINA CS16"
-            - "START_MONEY=800"
+            - MAXPLAYERS=32
+            - START_MAP=de_dust
+            - "SERVER_NAME=VINA CS16 (NEW)"
+            - START_MONEY=800
             - ADMIN_STEAM=0:1:103923358
-            - "FRIENDLY_FIRE=0"
-            - "BUY_TIME=0.25"
-        command: ["+log"]
+            - FRIENDLY_FIRE=0
+            - BUY_TIME=0.02
+            - RESTART_ON_FAIL=0
+        command: ["-autorestart","+log"]
 volumes:
     VCS1.6:
-
-
