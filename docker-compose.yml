@@ -1,0 +1,24 @@
+version: "3.5"
+services:
+    cs:
+        image: cs16ds/server:latest
+        volumes:
+            - VCS1.6:/opt/hlds/
+        ports:
+            - "26900:26900/udp"
+            - "27020:27020/udp"
+            - "27015:27015/udp"
+            - "27015:27015"
+        environment:
+            - "MAXPLAYERS=32"
+            - "START_MAP=cs_italy"
+            - "SERVER_NAME=VINA CS16"
+            - "START_MONEY=800"
+            - ADMIN_STEAM=0:1:103923358
+            - "FRIENDLY_FIRE=0"
+            - "BUY_TIME=0.25"
+        command: ["+log"]
+volumes:
+    VCS1.6:
+
+

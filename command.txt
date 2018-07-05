@@ -1,0 +1,1 @@
+docker run -d -p 26900:26900/udp -p 27020:27020/udp -p 27015:27015/udp -p 27015:27015 -e MAXPLAYERS=32 -e START_MAP=cs_italy -e SERVER_NAME="VINACS" -e START_MONEY=800 -e BUY_TIME=0.25 -e FRIENDLY_FIRE=0 -e ADMIN_STEAM=0:1:103923358 --name cs cs16ds/server:latest +log
